@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fafafa;
+}
+body{
+    padding: 20px;
+}
+
+/* Header Title */
+.title{
+    text-align: center;
+    font-family: "Amaranth", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+/* Input Box & Btn  */
+.input-box{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.n-size{
+    border: 1.5px solid #5A5A5A;
+    border-radius: 5px;
+    padding: 5px;
+    width: 250px;
+}
+.start-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    padding: 5px 10px;
+    border: 1.5px solid #C0C0C0;
+    border-radius: 5px;
+    background-color: #C0C0C0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+.start-btn span{
+    background-color: inherit;
+}
+.start-img{
+    width: 10px;
+    background-color: inherit;
+}
+
+/* main -> question & answer */
+main{
+    height: 70vh;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+/* question */
+.question{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chessBoard{
+    width: 400px;
+    height: 400px;
+    display: grid;
+}
+.cc, .cs{
+    display: grid;
+}
+.c, .ccs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.queen{
+    object-fit: cover;
+    width: 50%;
+    background-color: inherit;
+}
+
+/* answers */
+.question2{
+}
+.solution{
+    font-family: "Amaranth", sans-serif;
+    text-align: center;
+    font-weight: 500;
+    margin-left: 10px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.answers{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 60vh;
+    overflow-y: auto;
+    gap: 5px;
+}
+.chessBoard-s{
+    width: 200px;
+    height: 200px;
+    display: grid;
+}
+
+@media screen and (max-width : 1000px){
+    .answers{
+        grid-template-columns: 1fr;
+    }
+    .chessBoard-s{
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width : 750px){
+    .chessBoard{
+        margin-top: 30px;
+    }
+    .question2{
+        width: 100vw;
+        margin-top: 30px;
+    }
+    .answers{
+        display: flex;
+        width: 100%;
+        height: auto;
+        gap: 10px;
+    }
+
+    main{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width : 480px){
+    .chessBoard{
+        width: 350px;
+        height: 350px;
+        margin-left: 5px;
+    }
+}
